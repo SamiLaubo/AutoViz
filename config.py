@@ -1,0 +1,10 @@
+NUM_LEDS = 300
+
+UDP_PORT = 21324         # WLED Sync Settings
+UDP_IP = '192.168.1.145'  # WLED Wifi Setting
+
+SONG_ID = ''
+CHANGE_SONG = False
+SONG_PROG_S = 0.0
+SONG_DUR_S = 0.0
+SPOTIFY_ACTIVE = False
