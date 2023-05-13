@@ -1,7 +1,9 @@
 import numpy as np
 from time import sleep
+import time
 
 import config
+from song_bank import SONG_BANK
 
 
 def spotify_current(spotify_handler):
@@ -14,32 +16,53 @@ def spotify_current(spotify_handler):
     else:
         try:
             new_SONG_ID = currentPlayer.get('item').get('id')
+            name = currentPlayer.get('item').get('name')
 
-            if new_SONG_ID == '':
+            # print(f'{name = }')
+
+            if new_SONG_ID == '' and name != '': # Local song
+                new_SONG_ID = name
+
+            if new_SONG_ID == '' or new_SONG_ID is None:
                 config.SPOTIFY_ACTIVE = False
+                config.SONG_ID = ''
 
                 raise Exception()
 
             if config.SONG_ID != new_SONG_ID:
-                config.SONG_ID = new_SONG_ID
-                config.CHANGE_SONG = True
-
-                config.SONG_PROG_S = currentPlayer.get('progress_ms') / 1000
-                config.SONG_DUR_S = currentPlayer.get('item').get('duration_ms') / 1000
-
-                name = currentPlayer.get('item').get('name')
+                # name = currentPlayer.get('item').get('name')
                 artist = currentPlayer.get('item').get('artists')[0].get('name')
 
-                print(f'Currently playing: {artist} - {name} ({config.SONG_PROG_S:.2f}s of {config.SONG_DUR_S:.2f}s)')
+                config.SONG_ID = new_SONG_ID
+                config.CHANGE_SONG = True
+                config.SONG_NAME = name
+
+                config.SONG_PROG_S = currentPlayer.get('progress_ms') / 1000
+                config.SONG_PROG_GET = time.time()
+                config.SONG_DUR_S = currentPlayer.get('item').get('duration_ms') / 1000
+
+
+                print(f'\nCurrently playing: {artist} - {name} ({config.SONG_PROG_S:.2f}s of {config.SONG_DUR_S:.2f}s)')
 
                 config.SPOTIFY_ACTIVE = True
+
+            else: # Same song check progress
+                cur_prog = currentPlayer.get('progress_ms') / 1000
+                # print('CUR Prog: ', cur_prog // 60, cur_prog % 60)
+                # config.diff_list.append(abs(cur_prog - config.SONG_PROG_S))
+                # print('Diff: ', cur_prog, (config.SONG_PROG_S + (time.time() - config.SONG_PROG_GET)), cur_prog - (config.SONG_PROG_S + time.time() - config.SONG_PROG_GET))
+
+                # Less than 100ms off -> update
+                if np.abs(config.SONG_PROG_S - cur_prog) > .5:
+                    # print(f'Updated progress - {config.SONG_PROG_S} - {cur_prog}')
+                    config.SONG_PROG_S = cur_prog
+                # else:
+                    # print('Updated not needed')
             
             if currentPlayer.get('is_playing') == False:
                 config.SPOTIFY_ACTIVE = False
             else:
                 config.SPOTIFY_ACTIVE = True
-
-
 
         except TypeError:
             print('Spotify Unavailable')
@@ -76,8 +99,10 @@ def spotify_loudness(spotify_handler):
         config.SPOTIFY_ACTIVE = False
 
     else:
+        block_times = np.exp(block_times)
+        block_times /= max(block_times)
+        block_times = np.ceil(block_times * 10).astype(np.int8)
         return block_times
-
 
 def spotify_thread(spotify_handler, delay_time):
     while True:
