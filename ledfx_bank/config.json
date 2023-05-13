@@ -1,0 +1,1605 @@
+{
+    "audio": {
+        "device_index": 0
+    },
+    "crossfade": 1.0,
+    "custom_presets": {
+        "real_strobe(Reactive)": {
+            "half-red-slow": {
+                "config": {
+                    "background_color": "black",
+                    "bass_strobe_decay_rate": 0.107,
+                    "bass_threshold": 0.817,
+                    "blur": 6.272,
+                    "brightness": 1.0,
+                    "color_step": 0.21,
+                    "flip": false,
+                    "gradient_name": "Sunset",
+                    "gradient_repeat": 9,
+                    "gradient_roll": 0,
+                    "mirror": false,
+                    "strobe_color": "red",
+                    "strobe_decay_rate": 0.051,
+                    "strobe_width": 68
+                },
+                "name": "HALF_RED_SLOW"
+            },
+            "partymode": {
+                "config": {
+                    "background_color": "black",
+                    "bass_strobe_decay_rate": 0.7,
+                    "bass_threshold": 0.4,
+                    "blur": 0.0,
+                    "brightness": 1.0,
+                    "color_step": 0.173,
+                    "flip": false,
+                    "gradient_name": "Rainbow",
+                    "gradient_repeat": 1,
+                    "gradient_roll": 4,
+                    "mirror": true,
+                    "strobe_color": "gold",
+                    "strobe_decay_rate": 0.85,
+                    "strobe_width": 50
+                },
+                "name": "Partymode"
+            }
+        }
+    },
+    "dev_mode": false,
+    "devices": [
+        {
+            "config": {
+                "center_offset": 0,
+                "channel_count": 900,
+                "channel_offset": 0,
+                "e131_Packet_Priority": 100,
+                "force_refresh": false,
+                "icon_name": "SettingsInputComponent",
+                "ip_address": "192.168.36.172",
+                "max_brightness": 1,
+                "name": "led",
+                "pixel_count": 300,
+                "preview_only": false,
+                "refresh_rate": 60,
+                "type": "e131",
+                "universe": 1,
+                "universe_end": 2,
+                "universe_size": 510
+            },
+            "effect": {
+                "config": {
+                    "background_color": "black",
+                    "bass_strobe_decay_rate": 0.307,
+                    "bass_threshold": 1,
+                    "blur": 6.272,
+                    "brightness": 1,
+                    "color_step": 0,
+                    "flip": false,
+                    "gradient_name": "Dancefloor",
+                    "gradient_repeat": 1,
+                    "gradient_roll": 0,
+                    "mirror": false,
+                    "strobe_color": "red",
+                    "strobe_decay_rate": 0.046,
+                    "strobe_width": 68.493
+                },
+                "type": "real_strobe(Reactive)"
+            },
+            "id": "led",
+            "type": "e131"
+        }
+    ],
+    "fade": 1.0,
+    "host": "0.0.0.0",
+    "integrations": [],
+    "port": 8888,
+    "scenes": {
+        "blue": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color": "blue",
+                        "color_high": "cyan",
+                        "color_lows": "orange-deep",
+                        "color_mids": "yellow",
+                        "decay": 1,
+                        "flip": false,
+                        "mirror": true,
+                        "modulate": false,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.5,
+                        "speed": 5.0,
+                        "threshold": 0.7
+                    },
+                    "type": "singleColor"
+                }
+            },
+            "name": "blue"
+        },
+        "bounce-borealis": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.467,
+                        "ease_method": "ease_in_out",
+                        "flip": true,
+                        "gradient_name": "Borealis",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 8,
+                        "mirror": true,
+                        "mode": "bounce"
+                    },
+                    "type": "bar(Reactive)"
+                }
+            },
+            "name": "bounceBOREALIS"
+        },
+        "bounce-full-dance": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.125,
+                        "ease_method": "ease_out",
+                        "flip": true,
+                        "gradient_name": "Plasma",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": true,
+                        "mode": "wipe"
+                    },
+                    "type": "bar(Reactive)"
+                }
+            },
+            "name": "bounceFULLdance"
+        },
+        "bounce-full-red": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.125,
+                        "ease_method": "ease_out",
+                        "flip": true,
+                        "gradient_name": "Rust",
+                        "gradient_repeat": 6,
+                        "gradient_roll": 2,
+                        "mirror": true,
+                        "mode": "wipe"
+                    },
+                    "type": "bar(Reactive)"
+                }
+            },
+            "name": "bounceFULLred"
+        },
+        "bounce-rainbow": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.467,
+                        "ease_method": "ease_in_out",
+                        "flip": true,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 8,
+                        "mirror": true,
+                        "mode": "bounce"
+                    },
+                    "type": "bar(Reactive)"
+                }
+            },
+            "name": "bounceRAINBOW"
+        },
+        "chill-6": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 4.555260047376609,
+                        "brightness": 1.0,
+                        "flip": true,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 1,
+                        "mirror": false,
+                        "speed": 0.194
+                    },
+                    "type": "fade"
+                }
+            },
+            "name": "chill 6"
+        },
+        "chill1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 8.587469069357562,
+                        "brightness": 1.0,
+                        "flip": true,
+                        "gradient_name": "Sunset",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 1,
+                        "mirror": false,
+                        "modulate": false,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.118,
+                        "speed": 0.22
+                    },
+                    "type": "gradient"
+                }
+            },
+            "name": "chill1"
+        },
+        "chill2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.24438981530504167,
+                        "brightness": 0.7114940200156161,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 1,
+                        "mirror": false,
+                        "modulate": true,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.086,
+                        "speed": 0.539
+                    },
+                    "type": "gradient"
+                }
+            },
+            "name": "chill2"
+        },
+        "chill3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.24438981530504167,
+                        "brightness": 0.7114940200156161,
+                        "flip": false,
+                        "gradient_name": "Sunset",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "modulate": false,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.9690619871670397,
+                        "speed": 5.608624445883839
+                    },
+                    "type": "gradient"
+                }
+            },
+            "name": "chill3"
+        },
+        "chill4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "green-turquoise",
+                        "blur": 6.170079760529817,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Christmas",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 3,
+                        "mirror": true,
+                        "modulate": true,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.5210822547308631,
+                        "speed": 0.499
+                    },
+                    "type": "gradient"
+                }
+            },
+            "name": "chill4"
+        },
+        "chill5": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 4.555260047376609,
+                        "brightness": 1.0,
+                        "flip": true,
+                        "gradient_name": "Ocean",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 1,
+                        "mirror": false,
+                        "speed": 5.0
+                    },
+                    "type": "fade"
+                }
+            },
+            "name": "chill5"
+        },
+        "chill7": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 6.176594831274896,
+                        "brightness": 1.0,
+                        "color": "red",
+                        "flip": false,
+                        "mirror": true,
+                        "modulate": true,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.7573696862826024,
+                        "speed": 0.6209270937076822
+                    },
+                    "type": "singleColor"
+                }
+            },
+            "name": "chill7"
+        },
+        "chill8": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 6.176594831274896,
+                        "brightness": 1.0,
+                        "color": "green-turquoise",
+                        "flip": false,
+                        "mirror": false,
+                        "modulate": true,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.7573696862826024,
+                        "speed": 0.6209270937076822
+                    },
+                    "type": "singleColor"
+                }
+            },
+            "name": "chill8"
+        },
+        "disco1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 4,
+                        "gradient_roll": 1,
+                        "mirror": true,
+                        "sparks": true
+                    },
+                    "type": "power(Reactive)"
+                }
+            },
+            "name": "Disco1"
+        },
+        "disco2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 4,
+                        "gradient_roll": 1,
+                        "mirror": true,
+                        "sparks": true
+                    },
+                    "type": "power(Reactive)"
+                }
+            },
+            "name": "Disco2"
+        },
+        "extreme1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.5,
+                        "brightness": 1.0,
+                        "color_cycler": false,
+                        "color_high": "cyan",
+                        "color_lows": "yellow",
+                        "color_mids": "green",
+                        "flip": false,
+                        "mirror": true,
+                        "mixing_mode": "overlap",
+                        "sensitivity": 0.65
+                    },
+                    "type": "energy(Reactive)"
+                }
+            },
+            "name": "extreme1"
+        },
+        "extreme2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "align": "left",
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 6,
+                        "gradient_roll": 0,
+                        "mirror": false
+                    },
+                    "type": "equalizer(reactive)"
+                }
+            },
+            "name": "extreme2"
+        },
+        "extreme3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": true,
+                        "sparks": true
+                    },
+                    "type": "power(Reactive)"
+                }
+            },
+            "name": "extreme3"
+        },
+        "extreme4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 4,
+                        "gradient_roll": 2,
+                        "mirror": true,
+                        "sparks": false
+                    },
+                    "type": "power(Reactive)"
+                }
+            },
+            "name": "extreme4"
+        },
+        "full1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 3.761401491539508,
+                        "brightness": 1.0,
+                        "color_step": 0.40995121399889745,
+                        "ease_method": "ease_out",
+                        "flip": false,
+                        "gradient_name": "Plasma",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 3,
+                        "mirror": true,
+                        "mode": "cascade"
+                    },
+                    "type": "multiBar(Reactive)"
+                }
+            },
+            "name": "Full1"
+        },
+        "green": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color": "green",
+                        "color_high": "cyan",
+                        "color_lows": "orange-deep",
+                        "color_mids": "yellow",
+                        "decay": 1,
+                        "flip": false,
+                        "mirror": true,
+                        "modulate": false,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.5,
+                        "speed": 5.0,
+                        "threshold": 0.7
+                    },
+                    "type": "singleColor"
+                }
+            },
+            "name": "green"
+        },
+        "half-red-faster": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.307,
+                        "bass_threshold": 1.0,
+                        "blur": 6.272,
+                        "brightness": 1.0,
+                        "color_step": 0.0,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "strobe_color": "red",
+                        "strobe_decay_rate": 0.046,
+                        "strobe_width": 68
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "half_red_faster"
+        },
+        "half-red-slow": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.107,
+                        "bass_threshold": 0.817,
+                        "blur": 6.272,
+                        "brightness": 1.0,
+                        "color_step": 0.21,
+                        "flip": false,
+                        "gradient_name": "Sunset",
+                        "gradient_repeat": 9,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "strobe_color": "red",
+                        "strobe_decay_rate": 0.051,
+                        "strobe_width": 68
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "half_red_slow"
+        },
+        "hard1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 3.0,
+                        "brightness": 1.0,
+                        "color_high": "blue",
+                        "color_lows": "red",
+                        "color_mids": "green",
+                        "decay": 0.97,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 4,
+                        "threshold": 0.0
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "hard1"
+        },
+        "hard10": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 1.0,
+                        "brightness": 1.0,
+                        "fade_rate": 0.15,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 8,
+                        "mirror": false,
+                        "responsiveness": 0.536
+                    },
+                    "type": "pitchSpectrum(Reactive)"
+                }
+            },
+            "name": "hard10"
+        },
+        "hard2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.20444417171673668,
+                        "brightness": 1.0,
+                        "color_high": "red",
+                        "color_lows": "green-spring",
+                        "color_mids": "red",
+                        "decay": 0.907001664505631,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 6,
+                        "threshold": 0.590340110398889
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "hard2"
+        },
+        "hard3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 8.121234386391503,
+                        "brightness": 1.0,
+                        "color_high": "green-coral",
+                        "color_lows": "red",
+                        "color_mids": "orange",
+                        "decay": 0.97,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 8,
+                        "threshold": 0.5466364412932588
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "hard3"
+        },
+        "hard4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "mirror": false
+                    },
+                    "type": "spectrum(Reactive)"
+                }
+            },
+            "name": "hard4"
+        },
+        "hard5": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "band_count": 6,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "flip_gradient": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 2,
+                        "gradient_roll": 1,
+                        "mirror": false
+                    },
+                    "type": "bands_matrix(Reactive)"
+                }
+            },
+            "name": "hard5"
+        },
+        "hard6": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.125,
+                        "ease_method": "ease_in",
+                        "flip": true,
+                        "gradient_name": "Winter",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": true,
+                        "mode": "bounce"
+                    },
+                    "type": "bar(Reactive)"
+                }
+            },
+            "name": "hard6"
+        },
+        "hard7": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 7.887483619649835,
+                        "brightness": 0.41398053171237414,
+                        "color_step": 0.17968481885863682,
+                        "ease_method": "ease_in_out",
+                        "flip": true,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 3,
+                        "mirror": true,
+                        "mode": "bounce"
+                    },
+                    "type": "bar(Reactive)"
+                }
+            },
+            "name": "hard7"
+        },
+        "hard8": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 5.378434095736014,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "frequency_range": "Bass (60-250Hz)",
+                        "gradient_name": "Borealis",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 5,
+                        "mirror": false
+                    },
+                    "type": "magnitude(Reactive)"
+                }
+            },
+            "name": "hard8"
+        },
+        "hard9": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 3.761401491539508,
+                        "brightness": 1.0,
+                        "color_step": 0.40995121399889745,
+                        "ease_method": "ease_out",
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 7,
+                        "mirror": true,
+                        "mode": "cascade"
+                    },
+                    "type": "multiBar(Reactive)"
+                }
+            },
+            "name": "hard9"
+        },
+        "medium-back": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "block_count": 4,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 5,
+                        "gradient_roll": 1,
+                        "mirror": false
+                    },
+                    "type": "blocks(Reactive)"
+                }
+            },
+            "name": "medium_back"
+        },
+        "medium-back1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "block_count": 4,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 5,
+                        "gradient_roll": 1,
+                        "mirror": false
+                    },
+                    "type": "blocks(Reactive)"
+                }
+            },
+            "name": "medium_back1"
+        },
+        "medium-back2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "blur": 0.5,
+                        "brightness": 1.0,
+                        "color_cycler": true,
+                        "color_high": "cyan",
+                        "color_lows": "yellow",
+                        "color_mids": "green",
+                        "flip": false,
+                        "mirror": true,
+                        "mixing_mode": "overlap",
+                        "sensitivity": 0.65
+                    },
+                    "type": "energy(Reactive)"
+                }
+            },
+            "name": "medium_back2"
+        },
+        "medium-back3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 8.464669855377387,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "frequency_range": "Sub Bass (20-60Hz)",
+                        "gradient_name": "Christmas",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 1,
+                        "mirror": false
+                    },
+                    "type": "magnitude(Reactive)"
+                }
+            },
+            "name": "medium_back3"
+        },
+        "medium-back4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "blur": 9.802290441262594,
+                        "brightness": 1.0,
+                        "fade_rate": 0.6995150854402795,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_roll": 8,
+                        "high_colour": "blue",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "white",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "red",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy",
+                        "responsiveness": 0.8805526178803261
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "medium_back4"
+        },
+        "medium1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 1.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "pink",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "white",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "cyan",
+                        "mids_sensitivity": 0.05,
+                        "mirror": true,
+                        "raindrop_animation": "droplet_1.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "medium1"
+        },
+        "medium2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 2.3348743111776225,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "yellow",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "red",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "orange",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_2.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "medium2"
+        },
+        "medium3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.7900862850493173,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "cyan",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "orange-deep",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "yellow-acid",
+                        "mids_sensitivity": 0.05,
+                        "mirror": true,
+                        "raindrop_animation": "droplet_0.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "medium3"
+        },
+        "medium4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 9.802290441262594,
+                        "brightness": 1.0,
+                        "fade_rate": 0.6995150854402795,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_roll": 8,
+                        "high_colour": "blue",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "white",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "red",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy",
+                        "responsiveness": 0.8805526178803261
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "medium4"
+        },
+        "medium5": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "align": "left",
+                        "background_color": "black",
+                        "band_count": 6,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false
+                    },
+                    "type": "bands(Reactive)"
+                }
+            },
+            "name": "medium5"
+        },
+        "medium6": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.125,
+                        "ease_method": "ease_in_out",
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "mode": "wipe"
+                    },
+                    "type": "multiBar(Reactive)"
+                }
+            },
+            "name": "medium6"
+        },
+        "medium7": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.125,
+                        "ease_method": "ease_in_out",
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "mode": "wipe"
+                    },
+                    "type": "multiBar(Reactive)"
+                }
+            },
+            "name": "medium7"
+        },
+        "medium8": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 1.0,
+                        "brightness": 1.0,
+                        "color_high": "cyan",
+                        "color_lows": "pink",
+                        "color_mids": "lightpink",
+                        "decay": 1.0,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 1,
+                        "threshold": 1.0
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "medium8"
+        },
+        "midnight1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 6.176594831274896,
+                        "brightness": 1.0,
+                        "color": "red",
+                        "flip": false,
+                        "mirror": true,
+                        "modulate": true,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.7573696862826024,
+                        "speed": 0.6209270937076822
+                    },
+                    "type": "singleColor"
+                }
+            },
+            "name": "midnight1"
+        },
+        "no-scene": {
+            "devices": {
+                "led": {}
+            },
+            "name": "No scene"
+        },
+        "pink": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color": "pink",
+                        "color_high": "cyan",
+                        "color_lows": "orange-deep",
+                        "color_mids": "yellow",
+                        "decay": 1,
+                        "flip": false,
+                        "mirror": true,
+                        "modulate": false,
+                        "modulation_effect": "sine",
+                        "modulation_speed": 0.5,
+                        "speed": 5.0,
+                        "threshold": 0.7
+                    },
+                    "type": "singleColor"
+                }
+            },
+            "name": "pink"
+        },
+        "pink-rain": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 9.802290441262594,
+                        "brightness": 1.0,
+                        "fade_rate": 0.6995150854402795,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_roll": 8,
+                        "high_colour": "hotpink",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "purple",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "pink",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_1.npy",
+                        "responsiveness": 0.8805526178803261
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "rainPINK"
+        },
+        "rain-3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.7900862850493173,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "cyan",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "orange-deep",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "yellow-acid",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "rain3"
+        },
+        "rain-gold": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.7900862850493173,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "gold",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "gold",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "gold",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "rainGOLD"
+        },
+        "rainbow-3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.7900862850493173,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "cyan",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "orange-deep",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "yellow-acid",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "rainbow3"
+        },
+        "rainbow-full": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 7.723939087082861,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "frequency": 0.122,
+                        "mirror": true,
+                        "speed": 0.3
+                    },
+                    "type": "rainbow"
+                }
+            },
+            "name": "rainbowFULL"
+        },
+        "rainbow-gold": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.7900862850493173,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "high_colour": "gold",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "gold",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "gold",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy"
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "rainbowGOLD"
+        },
+        "rainbow-high-freq": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": true,
+                        "frequency": 4.442061196764945,
+                        "mirror": true,
+                        "speed": 1.1239404505421837
+                    },
+                    "type": "rainbow"
+                }
+            },
+            "name": "rainbowHIGHfreq"
+        },
+        "rave1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.7,
+                        "bass_threshold": 0.4,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.0625,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "strobe_color": "white",
+                        "strobe_decay_rate": 0.85,
+                        "strobe_width": 50
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "rave1"
+        },
+        "rave2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.7,
+                        "bass_threshold": 1.0,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.0625,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 0,
+                        "mirror": false,
+                        "strobe_color": "white",
+                        "strobe_decay_rate": 0.85,
+                        "strobe_width": 50
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "rave2"
+        },
+        "rave3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.515,
+                        "bass_threshold": 0.164,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.0625,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 7,
+                        "mirror": false,
+                        "strobe_color": "black",
+                        "strobe_decay_rate": 0.748,
+                        "strobe_width": 112
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "rave3"
+        },
+        "rave4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.7,
+                        "bass_threshold": 0.4,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.173,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 4,
+                        "mirror": true,
+                        "strobe_color": "gold",
+                        "strobe_decay_rate": 0.85,
+                        "strobe_width": 50
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "rave4"
+        },
+        "rave5": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.7,
+                        "bass_threshold": 0.228,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.173,
+                        "flip": false,
+                        "gradient_name": "Rainbow",
+                        "gradient_repeat": 1,
+                        "gradient_roll": 5,
+                        "mirror": true,
+                        "strobe_color": "gold",
+                        "strobe_decay_rate": 0.85,
+                        "strobe_width": 50
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "rave5"
+        },
+        "red-rain": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 9.802290441262594,
+                        "brightness": 1.0,
+                        "fade_rate": 0.6995150854402795,
+                        "flip": false,
+                        "gradient_name": "Dancefloor",
+                        "gradient_roll": 8,
+                        "high_colour": "red",
+                        "high_sensitivity": 0.1,
+                        "lows_colour": "red",
+                        "lows_sensitivity": 0.1,
+                        "mids_colour": "red",
+                        "mids_sensitivity": 0.05,
+                        "mirror": false,
+                        "raindrop_animation": "droplet_0.npy",
+                        "responsiveness": 0.8805526178803261
+                    },
+                    "type": "rain(Reactive)"
+                }
+            },
+            "name": "red_rain"
+        },
+        "scroll-3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 3.0,
+                        "brightness": 1.0,
+                        "color_high": "blue",
+                        "color_lows": "red",
+                        "color_mids": "green",
+                        "decay": 0.97,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 5,
+                        "threshold": 0.0
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "scroll3"
+        },
+        "scroll-red": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 8.121234386391503,
+                        "brightness": 1.0,
+                        "color_high": "red",
+                        "color_lows": "red",
+                        "color_mids": "red",
+                        "decay": 0.97,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 8,
+                        "threshold": 0.5466364412932588
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "scrollRED"
+        },
+        "start1": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "flip": true,
+                        "frequency": 4.442061196764945,
+                        "mirror": true,
+                        "speed": 1.1239404505421837
+                    },
+                    "type": "rainbow"
+                }
+            },
+            "name": "start1"
+        },
+        "start2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 7.723939087082861,
+                        "brightness": 1.0,
+                        "flip": false,
+                        "frequency": 0.1,
+                        "mirror": true,
+                        "speed": 0.1
+                    },
+                    "type": "rainbow"
+                }
+            },
+            "name": "start2"
+        },
+        "start3": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 1.0,
+                        "brightness": 1.0,
+                        "color_high": "red",
+                        "color_lows": "red",
+                        "color_mids": "red",
+                        "decay": 1.0,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 1,
+                        "threshold": 1.0
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "start3"
+        },
+        "start4": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_high": "cyan",
+                        "color_lows": "orange-deep",
+                        "color_mids": "yellow",
+                        "decay": 1.0,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 1,
+                        "threshold": 0.7
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "start4"
+        },
+        "start5": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "blur": 8.121234386391503,
+                        "brightness": 1.0,
+                        "color_high": "green-coral",
+                        "color_lows": "red",
+                        "color_mids": "orange",
+                        "decay": 0.97,
+                        "flip": false,
+                        "mirror": true,
+                        "speed": 8,
+                        "threshold": 0.5466364412932588
+                    },
+                    "type": "scroll(Reactive)"
+                }
+            },
+            "name": "start5"
+        },
+        "whoop-whoop": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color": "blue",
+                        "flip": false,
+                        "frequency": "1/2 (.-. )",
+                        "mirror": false
+                    },
+                    "type": "strobe(Reactive)"
+                }
+            },
+            "name": "whoop_whoop"
+        },
+        "whoop-whoop2": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "black",
+                        "bass_strobe_decay_rate": 0.23,
+                        "bass_threshold": 0.849,
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color_step": 0.0,
+                        "flip": false,
+                        "gradient_name": "Plasma",
+                        "gradient_repeat": 8,
+                        "gradient_roll": 1,
+                        "mirror": false,
+                        "strobe_color": "blue",
+                        "strobe_decay_rate": 0.485,
+                        "strobe_width": 157
+                    },
+                    "type": "real_strobe(Reactive)"
+                }
+            },
+            "name": "whoop_whoop2"
+        },
+        "whoopety-whoopety": {
+            "devices": {
+                "led": {
+                    "config": {
+                        "background_color": "red",
+                        "blur": 0.0,
+                        "brightness": 1.0,
+                        "color": "blue",
+                        "flip": false,
+                        "frequency": "1/4 (.o. )",
+                        "mirror": false
+                    },
+                    "type": "strobe(Reactive)"
+                }
+            },
+            "name": "whoopety_whoopety"
+        }
+    },
+    "virtuals": []
+}
