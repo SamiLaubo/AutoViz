@@ -99,7 +99,13 @@ def main(effects_list_index, party_factor=0, use_loudness=True, USE_SPOTIFY=True
             continue # Skip rest of loop
     
         if not USE_SPOTIFY or not config.SPOTIFY_ACTIVE:
-            if time.time() - last_change_s > 10:
+            if config.CHANGE_SONG: # New song
+                config.CHANGE_SONG = False
+                last_change_s = time.time()
+                effects_handler.change_effect(f' - New local song', level=np.random.randint(0, 9))
+                continue
+
+            if time.time() - last_change_s > 10: # No song
                 last_change_s = time.time()
                 effects_handler.change_effect(f' - No spotify change: {USE_SPOTIFY=}, {config.SPOTIFY_ACTIVE=}')
 
@@ -181,7 +187,7 @@ def print_info():
 
 if __name__ == "__main__":
     # main(do_tests=True)
-    main(0)
+    # main(0)
 
     if len(sys.argv) == 1 or sys.argv[1] == 'info':
         print_info()

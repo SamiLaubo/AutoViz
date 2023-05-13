@@ -10,24 +10,36 @@ def spotify_current(spotify_handler):
     try:
         currentPlayer = spotify_handler.currently_playing()
     except Exception as e:
-        print(e)
+        print(f'2{e=}')
         config.SONG_ID = ''
         config.SPOTIFY_ACTIVE = False
     else:
+        if currentPlayer == None:
+            config.SPOTIFY_ACTIVE = False
+            return
+
         try:
             new_SONG_ID = currentPlayer.get('item').get('id')
             name = currentPlayer.get('item').get('name')
 
-            # print(f'{name = }')
+            # Local song or sth wrong
+            if (new_SONG_ID == '' or new_SONG_ID is None):
+                if name in SONG_BANK: # Local song in bank
+                    new_SONG_ID = name
+                else: # If local song not in bank, use time only       
+                    config.SPOTIFY_ACTIVE = False
 
-            if new_SONG_ID == '' and name != '': # Local song
-                new_SONG_ID = name
+                    if config.SONG_ID != name: # New local song
+                        config.SONG_ID = name
+                        config.CHANGE_SONG = True
 
-            if new_SONG_ID == '' or new_SONG_ID is None:
-                config.SPOTIFY_ACTIVE = False
-                config.SONG_ID = ''
+                        print(f'\nCurrently playing local: {name}')
 
-                raise Exception()
+                    raise Exception()
+
+            # if new_SONG_ID == '' or new_SONG_ID is None:
+            #     config.SPOTIFY_ACTIVE = False
+
 
             if config.SONG_ID != new_SONG_ID:
                 # name = currentPlayer.get('item').get('name')
@@ -67,7 +79,8 @@ def spotify_current(spotify_handler):
         except TypeError:
             print('Spotify Unavailable')
         except Exception as e:
-            print(e)
+            # print(f'1{e=}')
+            pass
 
 def spotify_timestamps(spotify_handler, blocks='sections'):
     try:
