@@ -13,7 +13,26 @@
 #     ['bounce-borealis'],                                                                                         # 8
 # ]
 
+# Start
 el_0 = [
+    ['rainbow-high-freq', 'rainbow-full'],     # 0
+    ['rainbow-full', 'bounce-full-red', 'bounce-full-dance', 'pink-rain', 'scroll-3', 'rain-gold'],     # 1
+    ['rainbow-full', 'bounce-full-red', 'bounce-full-dance', 'pink-rain', 'scroll-3', 'rain-gold'],     # 2
+    ['rain-gold', 'rain-3', 'red-rain', 'pink-rain', 'blue-rain', 'bounce-borealis', 'hard8', 'hard9', 'medium-back4'],     # 3
+    ['rain-gold', 'rain-3', 'red-rain', 'pink-rain', 'blue-rain', 'bounce-borealis', 'hard8', 'hard9', 'medium-back4'],     # 4
+    ['bounce-blue', 'bounce-borealis', 'bounce-full-dance', 'bounce-full-red', 'hard8', 'hard9', 'medium-back4', 'medium3', 'medium4'], # 5
+    ['bounce-blue', 'bounce-borealis', 'bounce-full-dance', 'bounce-full-red', 'hard8', 'hard9', 'medium-back3', 'medium-back4', 'medium3', 'medium4'], # 6
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'medium-back3', 'medium3', 'medium4'], # 7
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'medium-back3', 'medium3', 'medium4'], # 8
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'whoop-whoop'], # 9
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'whoop-whoop'], # 10
+    ['rainbow-high-freq', 'rainbow-full', 'bounce-full-red', 'bounce-rainbow', 'bounce-borealis'],      # 11 - Start
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'pink-rain'],      # 12 - Rave
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full']      # 13 - Extreme
+]
+
+# Party
+el_1 = [
     ['rainbow-high-freq', 'rainbow-full'],     # 0
     ['rainbow-full', 'bounce-full-red', 'bounce-full-dance', 'pink-rain', 'scroll-3', 'rain-gold'],     # 1
     ['rain-gold', 'rain-3', 'red-rain', 'pink-rain'],     # 2
@@ -23,17 +42,18 @@ el_0 = [
     ['rave3', 'disco1', 'rain-3'],     # 6
     ['rave3', 'disco1', 'rain-3'],     # 7
     ['disco1', 'rave3'],     # 8
-    ['disco1', 'disco2', 'rave2'],     # 9
-    ['rave1', 'rave2', 'rave4', 'rave5'],     # 10
+    ['disco1', 'disco2', 'rave2', 'whoopety-whoopety', 'whoop-whoop'],     # 9
+    ['rave1', 'rave2', 'rave4', 'rave5', 'whoopety-whoopety', 'whoop-whoop2'],     # 10
     ['rainbow-high-freq', 'rainbow-full', 'bounce-full-red', 'bounce-rainbow', 'bounce-borealis'],      # 11 - Start
     ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'pink-rain'],      # 12 - Rave
-    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full'],      # 13 - Extreme
-    ['green'] # Test
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full']      # 13 - Extreme
 ]
 
-el_1 = [
-    ['blue'],
-    ['green']
-]
+# Hard
+# el_0 = [
+#     ['rainbow-high-freq', 'rainbow-full'],     # 0
+#     ['rain-gold', 'rain-3', 'red-rain', 'pink-rain'],
+#     ['green']
+# ]
 
 effects_lists = [el_0, el_1]

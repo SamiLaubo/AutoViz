@@ -42,6 +42,7 @@ def spotify_current(spotify_handler):
 
 
             if config.SONG_ID != new_SONG_ID:
+                config.SPOTIFY_ACTIVE = True
                 # name = currentPlayer.get('item').get('name')
                 artist = currentPlayer.get('item').get('artists')[0].get('name')
 
@@ -56,7 +57,6 @@ def spotify_current(spotify_handler):
 
                 print(f'\nCurrently playing: {artist} - {name} ({config.SONG_PROG_S:.2f}s of {config.SONG_DUR_S:.2f}s)')
 
-                config.SPOTIFY_ACTIVE = True
 
             else: # Same song check progress
                 cur_prog = currentPlayer.get('progress_ms') / 1000
@@ -91,12 +91,16 @@ def spotify_timestamps(spotify_handler, blocks='sections'):
     except TypeError:
         print('Spotify Unavailable')
         config.SPOTIFY_ACTIVE = False
+        return np.array([0])
     except Exception as e:
         print(e)
         config.SPOTIFY_ACTIVE = False
+        return np.array([0])
 
     else:
         return block_times
+    
+    return np.array([0])
 
 def spotify_loudness(spotify_handler):
     try:

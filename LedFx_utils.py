@@ -41,11 +41,13 @@ class Effects_Handler:
                 "action": "activate"
             })
         elif effect != '': # SONG_BANK
+            # print(f'hard change send bank - {effect}')
             payload = json.dumps({
                 "id": effect,
                 "action": "activate"
             })
         else:
+            # print(f'no effect change - {effects_lists[self.eli][level][self.effect_index]}')
             payload = json.dumps({
                 "id": effects_lists[self.eli][level][self.effect_index],
                 "action": "activate"

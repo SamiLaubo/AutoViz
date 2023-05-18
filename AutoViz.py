@@ -72,7 +72,7 @@ def main(effects_list_index, party_factor=0, use_loudness=True, USE_SPOTIFY=True
     cur_section_idx = 0
     cur_time = time.time()
 
-    section_times = []  # In s!
+    section_times = np.array([0])  # In s!
     section_loudness = []
     beat_times = []     # In s!
 
@@ -102,12 +102,12 @@ def main(effects_list_index, party_factor=0, use_loudness=True, USE_SPOTIFY=True
             if config.CHANGE_SONG: # New song
                 config.CHANGE_SONG = False
                 last_change_s = time.time()
-                effects_handler.change_effect(f' - New local song', level=np.random.randint(0, 9))
+                effects_handler.change_effect(f' - New local song')
                 continue
 
             if time.time() - last_change_s > 10: # No song
                 last_change_s = time.time()
-                effects_handler.change_effect(f' - No spotify change: {USE_SPOTIFY=}, {config.SPOTIFY_ACTIVE=}')
+                effects_handler.change_effect(f' - No spotify change: {USE_SPOTIFY=}, {config.SPOTIFY_ACTIVE=}', level=np.random.randint(0, 9))
 
             continue # Skip rest of loop
 
@@ -116,17 +116,21 @@ def main(effects_list_index, party_factor=0, use_loudness=True, USE_SPOTIFY=True
         # -----------------
 
         # Change song
-        if config.CHANGE_SONG and config.SONG_ID != '':
+        # if config.CHANGE_SONG:
+            # print(f'{config.CHANGE_SONG = }')
+        if config.CHANGE_SONG:# and config.SONG_ID != '':
             config.CHANGE_SONG = False
-
+            # print('Changed song 121')c
             # Get analysis
             if config.SONG_NAME in SONG_BANK:
-                print('Using song bank!')
+                # print('Using song bank!')
                 section_times = SONG_BANK.get(config.SONG_NAME).get('times')
+                # print(f'1{section_times = }')
                 section_loudness = SONG_BANK.get(config.SONG_NAME).get('effects')
                 use_song_bank = True
             else:
                 section_times = spotify_timestamps(spotify_handler, blocks='sections')
+                # print(f'2{section_times = }')
                 section_loudness = spotify_loudness(spotify_handler)
                 use_song_bank = False
 
@@ -141,6 +145,7 @@ def main(effects_list_index, party_factor=0, use_loudness=True, USE_SPOTIFY=True
 
         # Check and change effect
         if config.SONG_PROG_S < config.SONG_DUR_S:
+            # print(f'3{section_times = }')
             new_section_idx = np.argmax(config.SONG_PROG_S < section_times) - 1
             if config.SONG_PROG_S > section_times[-1]:
                 new_section_idx = len(section_times) - 1
