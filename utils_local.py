@@ -22,31 +22,39 @@ def send_package(_sock, data):
 
 # Add manual override
 def on_press(key):
-    if key == keyboard.Key.esc:
+    # print(f'{key = }')
+    try:
+        k = key.char  # single-char keys
+    except:
+        k = key.name  # other keys
+
+    # if key == keyboard.Key.esc:
+    if k == '§':
         print('! --- Stopping keyboard listener --- !')
         config.KEY_OVERRIDE = False
         return False  # stop listener
     
-    elif key == keyboard.Key.space:
+    # elif key == keyboard.Key.space:
+    elif k == '`':
         print('Pressed space - Back to normal mode')
         config.KEY_OVERRIDE = False
 
     else:
-        try:
-            k = key.char  # single-char keys
-        except:
-            k = key.name  # other keys
 
-        if k in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:  # keys of interest
-            print('Key pressed: ' + k)
+        # print(f'{k = }')
+        # print(f'{config.KEY_CTRL = }')
+        # nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        shifts = np.array(['=', '!', '"', '#', '¤', '%', '&', '/', '(', ')'])
+
+        if k in shifts:  # keys of interest
+            # print(f'{int(np.where(shifts==k)[0]) = }')
+            # print('Key pressed: ' + k)
             try:
                 config.KEY_OVERRIDE = True
                 config.KEY_OVERRIDE_NOW = True
-                config.KEY_NUMBER = int(k)
+                config.KEY_NUMBER = int(np.where(shifts==k)[0])
             except:
                 print('! --- Failed key override --- !')
-                
-        # if k == 'm':
 
 
 if __name__ == "__main__":

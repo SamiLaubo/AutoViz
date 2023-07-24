@@ -8,12 +8,16 @@ from song_bank import SONG_BANK
 
 def spotify_current(spotify_handler):
     try:
+        # print('active')
         currentPlayer = spotify_handler.currently_playing()
     except Exception as e:
         print(f'2{e=}')
         config.SONG_ID = ''
         config.SPOTIFY_ACTIVE = False
     else:
+        # print('active2')
+        config.SPOTIFY_ACTIVE = True
+
         if currentPlayer == None:
             config.SPOTIFY_ACTIVE = False
             return

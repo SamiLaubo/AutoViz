@@ -23,12 +23,12 @@ el_0 = [
     ['bounce-blue', 'bounce-borealis', 'bounce-full-dance', 'bounce-full-red', 'hard8', 'hard9', 'medium-back4', 'medium3', 'medium4'], # 5
     ['bounce-blue', 'bounce-borealis', 'bounce-full-dance', 'bounce-full-red', 'hard8', 'hard9', 'medium-back3', 'medium-back4', 'medium3', 'medium4'], # 6
     ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'medium-back3', 'medium3', 'medium4'], # 7
-    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'medium-back3', 'medium3', 'medium4'], # 8
-    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'whoop-whoop'], # 9
-    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'whoop-whoop'], # 10
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'medium-back3', 'medium3', 'medium4', 'full-bass-red', 'red-strobe'], # 8
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'whoop-whoop', 'full-bass-red', 'red-strobe'], # 9
+    ['disco1', 'disco2', 'full1', 'hard1', 'hard2', 'hard3', 'hard5', 'whoop-whoop', 'full-bass-red', 'red-strobe'], # 10
     ['rainbow-high-freq', 'rainbow-full', 'bounce-full-red', 'bounce-rainbow', 'bounce-borealis'],      # 11 - Start
-    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'pink-rain'],      # 12 - Rave
-    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full']      # 13 - Extreme
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'pink-rain', 'full-bass-red', 'red-strobe'],      # 12 - Rave
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full', 'full-bass-red', 'red-strobe']      # 13 - Extreme
 ]
 
 # Party
@@ -41,12 +41,12 @@ el_1 = [
     ['rave3', 'bounce-rainbow', 'pink-rain'],     # 5
     ['rave3', 'disco1', 'rain-3'],     # 6
     ['rave3', 'disco1', 'rain-3'],     # 7
-    ['disco1', 'rave3'],     # 8
-    ['disco1', 'disco2', 'rave2', 'whoopety-whoopety', 'whoop-whoop'],     # 9
-    ['rave1', 'rave2', 'rave4', 'rave5', 'whoopety-whoopety', 'whoop-whoop2'],     # 10
+    ['disco1', 'rave3', 'full-bass-red', 'red-strobe'],     # 8
+    ['disco1', 'disco2', 'rave2', 'whoopety-whoopety', 'whoop-whoop', 'full-bass-red', 'red-strobe'],     # 9
+    ['rave1', 'rave2', 'rave4', 'rave5', 'whoopety-whoopety', 'whoop-whoop2', 'full-bass-red', 'red-strobe'],     # 10
     ['rainbow-high-freq', 'rainbow-full', 'bounce-full-red', 'bounce-rainbow', 'bounce-borealis'],      # 11 - Start
-    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'pink-rain'],      # 12 - Rave
-    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full']      # 13 - Extreme
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'pink-rain', 'full-bass-red', 'red-strobe'],      # 12 - Rave
+    ['disco1', 'disco2', 'rave2', 'bounce-full-dance', 'scroll-3', 'rain-3', 'rave1', 'rave2', 'rave4', 'rave5', 'rainbow-full', 'full-bass-red', 'red-strobe']      # 13 - Extreme
 ]
 
 # Hard
